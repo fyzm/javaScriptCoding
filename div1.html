@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <div id="idv1">我是一个div</div>
+  </body>
+  <script>
+      var getId = document.getElementById;
+      getId('div1');
+  </script>
+  <script>
+    document.getElementById = (function(func){
+      return function(){
+        return func.apply(document,arguments);
+      }
+    })(document.getElementById);
+    var getId = document.getElementById;
+    var div = getId('div');
+    alert(div.id);//div
+  </script>
+</html>

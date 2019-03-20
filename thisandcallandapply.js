@@ -63,18 +63,30 @@ console.log(getName());//globalName
   </script>
 </html>
 
+var MyClass = function(){
+  this.name = 'sven';
+};
+var obj = new MyClass();
+alert(obj.name)//sven
 
 
+var MyClass = function(){
+  this.name = 'sven';
+  return {
+    name: 'anne'
+  }
+};
+
+var obj = new MyClass();
+alert(obj.name);//anne
 
 
-
-
-
-
-
-
-
-
+var MyClass = function(){
+  this.name = 'sven'
+  return 'anne';
+}
+var obj = new MyClass();
+alert(obj.name);
 
 */
 
