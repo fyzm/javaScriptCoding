@@ -1,0 +1,23 @@
+
+<html>
+  <body>
+    <div style="position: relative;background: blue" id="div" >我是div</div>
+  </body>
+  <script>
+    var Animate = function(dom){
+      this.dom = dom;
+      this.startTime = 0;
+      this.startPos = 0;
+      this.endPos = 0;
+      this.propertyName = null;
+      this.easing = null;
+      this.duration = null;
+    };
+    Animate.prototype.start = function(propertyName,endPos,duration,easing){
+      this.startTime = +new Date;
+      this.startPos = this.dom.getBoundingClientRect()[ propertyName ];
+      
+    }
+  </script>
+</html>
+
